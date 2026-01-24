@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Powerlube</title>
+  
+</head>
+<style>
+  .Top-page{
+     background-color: rgb(253, 212, 5);
+   position: center;
+}
+.logo{
+    margin-left: 200px;
+    margin-top: 20px;
+}
+.top_buttons{
+  background-color: rgb(253, 212, 5);
+  color: black;
+  font-size: 18px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.top_buttons:hover{
+  background-color:  rgb(255, 240, 166);
+}
+.introductrory-text{
+  padding: 20px;
+  text-align: center;
+}
+.location-container {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    min-height: 80vh;         /* Gives the container enough height to see the centering */
+    width: 100%;
+    padding: 20px 0;
+}.centered-location {
+    /* Adjust width based on how big you want the map to appear */
+    max-width: 800px;         
+    width: 70%;               /* Makes it responsive on mobile */
+    height: auto;
+    object-fit: contain;
+    
+    /* Optional: Add a nice shadow to make it pop like your other cards */
+    filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.1));
+}
+
+.footer-container {
+         background-color: rgb(218, 192, 64); /* The gold/yellow color from your logo/header */
+    padding: 60px 20px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.office-column {
+    flex: 1;
+}
+
+.office-column h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+/* The little underline under the titles */
+.office-column h3::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #707070; /* Gray underline from your image */
+    margin-top: 8px;
+}
+
+.office-details p {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.office-details strong {
+    color: #000;
+}
+
+/* Mobile Responsive: Stack them on top of each other */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .office-column h3::after {
+        margin: 8px auto; /* Centers the underline on mobile */
+    }
+}
+  </style>
+<body>
+<div class="Top-page">
+  <img src="PowerLubeWw.png" alt="powerlube logo" width="240" height="70" class="logo">
+  <button class="top_buttons" id="homeBtn"> Home </button>
+  <button class="top_buttons" id="ProductsBtn"> Products </button>
+  <button class="top_buttons" id="ServiceBtn"> Services </button>
+  <button class="top_buttons" id="LocationBtn"> Location</button>
+  <button class="top_buttons" id="ContactBtn"> Contact Us  </button>
+</div>
+<div class="location-container">
+    <img src="vecteezy_3d-pin-location-on-land-map-pin-icon-location-pin-map-pin_48219899.png" class="centered-location">
+</div>
+
+<div>
+
+</div>
+
+<footer class="footer-container">
+    <div class="footer-content">
+        <div class="office-column">
+            <h3>Obour Main Branch</h3>
+            <div class="office-details">
+                <p><strong>Address:</strong> Plot NO.4, Block 231 area B&C. Obour City - Cairo</p>
+                 <p><strong>Mobile Phone:</strong> +2 01094838181</p>
+                <p><strong>Phone:</strong> +2 0244873016</p>
+                <p><strong>Fax:</strong> +2 0226994687</p>
+                <p><strong>Email:</strong> info@powerlube.net</p>
+                <p><strong>Website:</strong> www.powerlube.net</p>
+
+            </div>
+        </div>
+
+        <div class="office-column">
+            <h3>Obour Branch</h3>
+            <div class="office-details">
+                <p><strong>Address:</strong> Obour Industrial Complex Saad Zaghloul Shop No. 121 Area. Obour City - Cairo</p>
+  
+            </div>
+        </div>
+
+        <div class="office-column">
+            <h3>Ain Sokhna Branch</h3>
+            <div class="office-details">
+                <p><strong>Address:</strong> Plot B46 , SIDK - EL Ain Sokhna </p>
+                <p><strong>E-mail:</strong> marketing@powerlube.net</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+      // Selecting the buttons
+const homeBtn = document.getElementById('homeBtn');
+const ServiceBtn = document.getElementById('ServiceBtn');
+const ProductsBtn = document.getElementById('ProductsBtn');
+const LocationBtn = document.getElementById('LocationBtn');
+const ContactBtn = document.getElementById('ContactBtn');
+
+// Adding the click events
+homeBtn.addEventListener('click', () => {
+    window.location.href = 'powerlube.html';
+});
+ServiceBtn.addEventListener('click', () => {
+    window.location.href = 'Service.html';
+});
+
+ProductsBtn.addEventListener('click', () => {
+    window.location.href = 'products.html';
+});
+LocationBtn.addEventListener('click', () => {
+    window.location.href = 'Location.html';
+});
+ContactBtn.addEventListener('click', () => {
+    window.location.href = 'Contact.html';
+});
+    </script>
+  </body>
+</html>

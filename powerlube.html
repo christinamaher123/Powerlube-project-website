@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Powerlube</title>
+  
+</head>
+<style>
+.Top-page{
+     background-color: rgb(253, 212, 5);
+   position: center;
+}
+.logo{
+    margin-left: 200px;
+    margin-top: 20px;
+}
+.top_buttons{
+  background-color: rgb(253, 212, 5);
+  color: black;
+  font-size: 18px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.top_buttons:hover{
+  background-color:  rgb(255, 240, 166);
+}
+.Images_Animation {
+  margin-top: 1px;
+  position: relative;
+  width: 100%;
+  height: 600px; /* Match your image height */
+  overflow: hidden;
+ 
+}
+
+.animate-img {
+  position: absolute;
+  width: 100%;
+  height: 600px;
+opacity: 0; 
+ /* FIXED: contain ensures the bearing is NEVER cropped */
+  object-fit: contain; 
+  
+  /* This ensures the image stays centered if the screen is wide */
+  object-position: center;
+  animation: slideOpposite 24s infinite; /* no.of images * seconds taken for each image */
+}
+
+/* Delay each image so they follow each other */
+.animate-img:nth-child(1) { animation-delay: 0s; }
+.animate-img:nth-child(2) { animation-delay: 4s; }
+.animate-img:nth-child(3) { animation-delay: 8s; }
+.animate-img:nth-child(4) { animation-delay: 12s; }
+.animate-img:nth-child(5) { animation-delay: 16s; }
+.animate-img:nth-child(6) { animation-delay: 20s; }
+
+@keyframes slideOpposite {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  /* Slide In (at ~1.4s) */
+  5% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  /* Stay Visible (until ~4s) */
+  14% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  /* Slide Out (by ~5.3s) */
+  19% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  /* Stay hidden for the rest of the 28s cycle */
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+/* Container for the whole section */
+.section-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+    border: #b00808;
+}
+
+.text-content {
+    /* No longer max-width 500 because it now contains the image too */
+    width: 90%; 
+    max-width: 1300;
+    margin-left: 150px;
+}
+
+/* THE MAGIC FIX: This aligns the image with the two paragraphs */
+.align-container {
+    display: flex;
+    align-items: center; /* Vertical centering between text and image */
+    gap: 200px;         /* Space between the paragraphs and image */
+
+}
+
+.left_title {
+    font-size: 25px;
+    line-height: 1.2;
+    color: #000;
+    margin-bottom: 5px;
+    margin-top: 120px; /* Reduced from 120px to look more natural */
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 900;
+}
+.highlight-word {
+    font-size: 24px;         /* Adjust this number to make it bigger */
+    font-weight: bold;      /* Makes it stand out more */
+    color: #000dca;            /* Keeps it black, or change to #2e67b1 for Mobil Blue */
+    margin-right: 2px;      /* Adds a tiny bit of space before the next word */
+    display: inline-block;  /* Helps with consistent sizing */
+}
+.two_paragraphs {
+    max-width: 500px;   /* Keep your paragraph width constraint here */
+}
+
+.left_paragraph {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    border: #000dca;
+}
+
+.right_image {
+    height: 550px;
+    width: 650px;
+    object-fit: contain;
+}
+
+/* Responsive Fix */
+@media (max-width: 1100px) {
+    .align-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .two_paragraphs {
+        max-width: 100%;
+    }
+}
+.align-container2 {
+    display: flex;
+    /* This centers the paragraph vertically relative to the image height */
+    align-items: center; 
+    gap: 200px; /* Space between image and text */
+    max-width: 1300px;
+    width: 90%;
+}
+
+.left_image {
+    height: 550px;
+    width: 650px;
+    object-fit: contain;
+}
+
+.text-content_right {
+    max-width: 500px; /* Keeps paragraph width consistent with your other sections */
+}
+
+.right_title {
+    font-size: 25px;
+    line-height: 1.2;
+    color: #000;
+    margin-bottom: 10px;
+    /* Removed the 120px top margin to allow flex centering to work */
+    margin-top: 0; 
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.right_paragraph {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    color: #000;
+}
+</style>
+<body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+
+<div class="Top-page">
+  <img src="PowerLubeWw.png" alt="powerlube logo" width="240" height="70" class="logo">
+  <button class="top_buttons" id="homeBtn"> Home </button>
+  <button class="top_buttons" id="ProductsBtn"> Products </button>
+  <button class="top_buttons" id="ServiceBtn"> Services </button>
+  <button class="top_buttons" id="LocationBtn"> Location</button>
+  <button class="top_buttons" id="ContactBtn"> Contact Us  </button>
+</div>
+
+<div class="Images_Animation">
+    <img src="lubricated-Engine.jpg" style="background-color: black;" width="100%" height="600px" class="animate-img">
+    <img src="I-SHC 037 Bearing06_0217FINAL01.jpg" width="100%" height="600px" class="animate-img">
+    <img src="WormGear2_Glygoyle460_EXOD9085_4H1.jpg" width="100%" height="600px" class="animate-img">
+    <img src="IMAGE1_EXOD9085_4H1.jpg"  width="100%" height="600px" class="animate-img">   
+    <img src="I-SHC 034 Bearing04_0137FINAL01.jpg" width="100%" height="600px" class="animate-img">
+    <img src="I-SHC 042 COMPRESSOR0906FINAL01_big.jpg" width="100%" height="600px" class="animate-img">
+</div>
+
+<div class="section-wrapper">
+    <div class="text-content">
+        <h1 class="left_title">Who we are?</h1>
+
+        <div class="align-container">
+            <div class="two_paragraphs">
+                <p class="left_paragraph">
+                 <span class="highlight-word">PowerLube</span>  is one of Mobil Authorized Distributors for industrial lubricants in Egypt, having more than 30 years experience of distributing engine and industrial lubricants backed up by a reputation for delivering 
+                   quality products and consumer satisfaction solutions. Power Lube supply a full range of high performance Mobil™ lubrication solutions covering Automotive and Industrial lubricants and Technical services.
+                </p>
+                <p class="left_paragraph">
+                 Using high quality Mobil™ lubricants has a direct effect on productivity, safety and environmental care. For decades, Mobil™ Industrial Lubricants has established an unsurpassed reputation as a supplier of leading edge lubricants with in-depth industry expertise to help bring customers to new heights of equipment productivity, energy saving solutions and safe environment.​
+                </p>
+            </div>
+
+            <img src="I-SHC 036 Bearing02_0057FINAL01_big.jpg" class="right_image">
+        </div>
+    </div>
+</div>
+
+<div class="section-wrapper">
+    <div class="align-container2">
+        
+        <img src="I-SHC 043 GEAR05_0713.jpg" class="left_image">
+
+        <div class="text-content_right"> 
+            <h1 class="right_title">OUR VISION</h1>
+            <p class="right_paragraph">
+                PowerLube is willing to be the market leader offering competitive
+                high end lubrication solutions, distributing Automotive and 
+                Industrial Mobil™ lubricants and a living proof of Safety, 
+                Productivity and Sustainability.
+            </p>
+        </div>
+        
+    </div>
+</div>
+</div>
+<script>
+      // Selecting the buttons
+const homeBtn = document.getElementById('homeBtn');
+const ServiceBtn = document.getElementById('ServiceBtn');
+const ProductsBtn = document.getElementById('ProductsBtn');
+const LocationBtn = document.getElementById('LocationBtn');
+const ContactBtn = document.getElementById('ContactBtn');
+
+// Adding the click events
+homeBtn.addEventListener('click', () => {
+    window.location.href = 'powerlube.html';
+});
+ServiceBtn.addEventListener('click', () => {
+    window.location.href = 'Service.html';
+});
+
+ProductsBtn.addEventListener('click', () => {
+    window.location.href = 'products.html';
+});
+LocationBtn.addEventListener('click', () => {
+    window.location.href = 'Location.html';
+});
+ContactBtn.addEventListener('click', () => {
+    window.location.href = 'Contact.html';
+});
+    </script>
+
+</body>
+</html>

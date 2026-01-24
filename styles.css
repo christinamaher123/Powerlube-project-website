@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: #004080; /* Mobil blue */
+    color: white;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background: url('hero-bg.jpg') no-repeat center/cover;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: white;
+}
+
+.btn {
+    background: #ff6600; /* Accent color */
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.product {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 1rem;
+}
+
+footer {
+    background: #004080;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}

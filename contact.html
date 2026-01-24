@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Powerlube</title>
+  
+</head>
+<style>
+  .Top-page{
+     background-color: rgb(253, 212, 5);
+   position: center;
+}
+.logo{
+    margin-left: 200px;
+    margin-top: 20px;
+}
+.top_buttons{
+  background-color: rgb(253, 212, 5);
+  color: black;
+  font-size: 18px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.top_buttons:hover{
+  background-color:  rgb(255, 240, 166);
+}
+
+  </style>
+<body>
+<div class="Top-page">
+  <img src="PowerLubeWw.png" alt="powerlube logo" width="240" height="70" class="logo">
+  <button class="top_buttons" id="homeBtn"> Home </button>
+  <button class="top_buttons" id="ProductsBtn"> Products </button>
+  <button class="top_buttons" id="ServiceBtn"> Services </button>
+  <button class="top_buttons" id="LocationBtn"> Location</button>
+  <button class="top_buttons" id="ContactBtn"> Contact Us  </button>
+</div>
+
+<script>
+      // Selecting the buttons
+const homeBtn = document.getElementById('homeBtn');
+const ServiceBtn = document.getElementById('ServiceBtn');
+const ProductsBtn = document.getElementById('ProductsBtn');
+const LocationBtn = document.getElementById('LocationBtn');
+const ContactBtn = document.getElementById('ContactBtn');
+
+// Adding the click events
+homeBtn.addEventListener('click', () => {
+    window.location.href = 'index.html';
+});
+ServiceBtn.addEventListener('click', () => {
+    window.location.href = 'service.html';
+});
+
+ProductsBtn.addEventListener('click', () => {
+    window.location.href = 'products.html';
+});
+LocationBtn.addEventListener('click', () => {
+    window.location.href = 'location.html';
+});
+ContactBtn.addEventListener('click', () => {
+    window.location.href = 'contact.html';
+});
+    </script>
+  </body>
+</html>

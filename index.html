@@ -7,7 +7,7 @@
 </head>
 <style>
 .Top-page{
-     background-color: rgb(253, 212, 5);
+     background-color: rgb(51, 54, 64);  /*rgb(2, 12, 50);*/
    position: center;
 }
 .logo{
@@ -28,6 +28,7 @@
   background-color:  rgb(255, 240, 166);
 }
 .Images_Animation {
+    background-color: rgb(2, 12, 50);
   margin-top: 1px;
   position: relative;
   width: 100%;
@@ -46,16 +47,17 @@ opacity: 0;
   
   /* This ensures the image stays centered if the screen is wide */
   object-position: center;
-  animation: slideOpposite 24s infinite; /* no.of images * seconds taken for each image */
+  animation: slideOpposite 18s infinite; /* no.of images * seconds taken for each image */
 }
 
 /* Delay each image so they follow each other */
 .animate-img:nth-child(1) { animation-delay: 0s; }
-.animate-img:nth-child(2) { animation-delay: 4s; }
-.animate-img:nth-child(3) { animation-delay: 8s; }
-.animate-img:nth-child(4) { animation-delay: 12s; }
-.animate-img:nth-child(5) { animation-delay: 16s; }
-.animate-img:nth-child(6) { animation-delay: 20s; }
+.animate-img:nth-child(2) { animation-delay: 3s; }
+.animate-img:nth-child(3) { animation-delay: 6s; }
+.animate-img:nth-child(4) { animation-delay: 9s; }
+.animate-img:nth-child(5) { animation-delay: 12s; }
+.animate-img:nth-child(6) { animation-delay: 15s; }
+
 
 @keyframes slideOpposite {
   0% {
@@ -136,8 +138,8 @@ opacity: 0;
 }
 
 .right_image {
-    height: 550px;
-    width: 650px;
+    height: 650px;
+    width: 500px;
     object-fit: contain;
 }
 
@@ -161,7 +163,7 @@ opacity: 0;
 }
 
 .left_image {
-    height: 550px;
+    height: 500px;
     width: 650px;
     object-fit: contain;
 }
@@ -203,12 +205,12 @@ opacity: 0;
 </div>
 
 <div class="Images_Animation">
-    <img src="lubricated-Engine.jpg" style="background-color: black;" width="100%" height="600px" class="animate-img">
-    <img src="I-SHC 037 Bearing06_0217FINAL01.jpg" width="100%" height="600px" class="animate-img">
-    <img src="WormGear2_Glygoyle460_EXOD9085_4H1.jpg" width="100%" height="600px" class="animate-img">
-    <img src="IMAGE1_EXOD9085_4H1.jpg"  width="100%" height="600px" class="animate-img">   
-    <img src="I-SHC 034 Bearing04_0137FINAL01.jpg" width="100%" height="600px" class="animate-img">
-    <img src="I-SHC 042 COMPRESSOR0906FINAL01_big.jpg" width="100%" height="600px" class="animate-img">
+    <img src="lubricated-Engine.jpg"  width="100%" height="600px" class="animate-img">
+    <img src="1.jpg" width="100%" height="600px" class="animate-img">
+    <img src="2.jpg" width="100%" height="600px" class="animate-img">
+    <img src="3.jpg"  width="100%" height="600px" class="animate-img">   
+    <img src="4.jpg" width="100%" height="600px" class="animate-img">
+    <img src="6.jpg" width="100%" height="600px" class="animate-img">
 </div>
 
 <div class="section-wrapper">
@@ -279,6 +281,7 @@ ContactBtn.addEventListener('click', () => {
 </body>
 
 </html>
+
 
 
 

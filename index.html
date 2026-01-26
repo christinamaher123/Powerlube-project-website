@@ -8,6 +8,7 @@
 <style>
 .Top-page{
      background-color: rgb(51, 54, 64);  /*rgb(2, 12, 50);*/
+     background-size:     100% 100%;
    position: center;
 }
 .logo{
@@ -16,7 +17,7 @@
 }
 .top_buttons{
   background-color: rgb(27, 29, 32);
-  color: black;
+  color: white;
   font-size: 18px;
   padding: 15px;
   border: none;
@@ -28,8 +29,10 @@
   background-color:  rgb(2, 128, 147);
 }
 .Images_Animation {
-    background-color: rgb(2, 12, 50);
-  margin-top: 1px;
+
+   /* background-image: url(d.jpg);*/
+  background-color: rgb(2, 12, 50);
+  margin-top: 0px;
   position: relative;
   width: 100%;
   height: 600px; /* Match your image height */
@@ -57,7 +60,6 @@ opacity: 0;
 .animate-img:nth-child(4) { animation-delay: 9s; }
 .animate-img:nth-child(5) { animation-delay: 12s; }
 .animate-img:nth-child(6) { animation-delay: 15s; }
-
 
 @keyframes slideOpposite {
   0% {
@@ -90,7 +92,7 @@ opacity: 0;
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 80px;
+    margin-bottom: 0px;
     border: #b00808;
 }
 
@@ -113,7 +115,7 @@ opacity: 0;
     font-size: 25px;
     line-height: 1.2;
     color: #000;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     margin-top: 120px; /* Reduced from 120px to look more natural */
     font-family: 'Playfair Display', serif;
     font-style: italic;
@@ -140,7 +142,7 @@ opacity: 0;
 .right_image {
     height: 650px;
     width: 500px;
-    object-fit: contain;
+    object-fit:contain;
 }
 
 /* Responsive Fix */
@@ -196,7 +198,7 @@ opacity: 0;
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
 
 <div class="Top-page">
-  <img src="PowerLubeww.png" alt="powerlube logo" width="240" height="70" class="logo">
+  <img src="PowerLubeWw.png" alt="powerlube logo" width="260" height="75" class="logo">
   <button class="top_buttons" id="homeBtn"> Home </button>
   <button class="top_buttons" id="ProductsBtn"> Products </button>
   <button class="top_buttons" id="ServiceBtn"> Services </button>
@@ -220,7 +222,7 @@ opacity: 0;
         <div class="align-container">
             <div class="two_paragraphs">
                 <p class="left_paragraph">
-                 <span class="highlight-word">PowerLube</span>  is one of Mobil Authorized Distributors for industrial lubricants in Egypt, having more than 35 years experience of distributing engine and industrial lubricants backed up by a reputation for delivering 
+                 <span class="highlight-word">PowerLube</span>  is one of Mobil Authorized Distributors for industrial lubricants in Egypt, having more than 30 years experience of distributing engine and industrial lubricants backed up by a reputation for delivering 
                    quality products and consumer satisfaction solutions. Power Lube supply a full range of high performance Mobil™ lubrication solutions covering Automotive and Industrial lubricants and Technical services.
                 </p>
                 <p class="left_paragraph">
@@ -261,26 +263,26 @@ const ContactBtn = document.getElementById('ContactBtn');
 
 // Adding the click events
 homeBtn.addEventListener('click', () => {
-    window.location.href = 'index.html';
+    window.location.href = 'powerlube.html';
 });
 ServiceBtn.addEventListener('click', () => {
-    window.location.href = 'service.html';
+    window.location.href = 'Service.html';
 });
 
 ProductsBtn.addEventListener('click', () => {
     window.location.href = 'products.html';
 });
 LocationBtn.addEventListener('click', () => {
-    window.location.href = 'location.html';
+    window.location.href = 'Location.html';
 });
 ContactBtn.addEventListener('click', () => {
-    window.location.href = 'contact.html';
+    window.location.href = 'Contact.html';
 });
     </script>
 
 </body>
-
 </html>
+
 
 
 

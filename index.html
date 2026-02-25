@@ -6,15 +6,42 @@
   
 </head>
 <style>
-.Top-page{
-     background-color: rgb(51, 54, 64);  /*rgb(2, 12, 50);*/
-     background-size:     100% 100%;
-   position: center;
+Top-page {
+    background-color: rgb(51, 54, 64);
+    display: flex;         /* This puts everything in one line */
+    align-items: center;   /* This centers items vertically */
+    padding: 10px 20px;    /* Adds some breathing room */
+    gap: 15px;             /* Space between buttons and icons */
 }
-.logo{
-    margin-left: 200px;
-    margin-top: 20px;
+
+.logo {
+    margin-left: 150px;    /* Adjusted slightly for better fit */
+    margin-right: 20px;
 }
+
+/* Container for your new contact icons in the header */
+.top-contact-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 10px;    /* Space after the last button */
+}
+
+.nav-icon {
+    width: 35px;          /* Size for header icons */
+    height: 35px;
+    transition: transform 0.2s;
+}
+
+.nav-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Specific fix for the phone icon to make it white/visible */
+.white-icon {
+    filter: brightness(0) invert(1);
+}
+
 .top_buttons{
   background-color: rgb(27, 29, 32);
   color: white;
@@ -347,6 +374,7 @@ ContactBtn.addEventListener('click', () => {
 
 </body>
 </html>
+
 
 
 

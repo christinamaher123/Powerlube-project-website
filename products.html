@@ -189,7 +189,15 @@
   <button class="top_buttons" id="ProductsBtn"> Products </button>
   <button class="top_buttons" id="ServiceBtn"> Services </button>
   <button class="top_buttons" id="LocationBtn"> Location</button>
-  <button class="top_buttons" id="ContactBtn"> Contact Us  </button>
+  <div class="floating-contact-wrap">
+    <a href="tel:+201276451065" class="float-btn bg-phone" title="Call Us">
+    <img src="https://cdn-icons-png.flaticon.com/512/455/455705.png" class="nav-icon white-icon" alt="Call">
+    </a>
+
+    <a href="https://wa.me/201276451065" class="float-btn bg-whatsapp" target="_blank" rel="noopener noreferrer" title="WhatsApp PowerLube">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+</div>
 </div>
 <h1 style="text-align: center; padding: 20px; margin-top: 20px;" > Our Products </h1>    
 
@@ -221,7 +229,7 @@ const homeBtn = document.getElementById('homeBtn');
 const ServiceBtn = document.getElementById('ServiceBtn');
 const ProductsBtn = document.getElementById('ProductsBtn');
 const LocationBtn = document.getElementById('LocationBtn');
-const ContactBtn = document.getElementById('ContactBtn');
+
 
 // Adding the click events
 homeBtn.addEventListener('click', () => {
@@ -237,13 +245,12 @@ ProductsBtn.addEventListener('click', () => {
 LocationBtn.addEventListener('click', () => {
     window.location.href = 'location.html';
 });
-ContactBtn.addEventListener('click', () => {
-    window.location.href = 'contact.html';
-});
+
     </script>
   </body>
 
 </html>
+
 
 
 
